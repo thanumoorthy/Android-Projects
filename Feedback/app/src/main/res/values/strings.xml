@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Feedback</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="question_1">Please Rate your experience</string>
+    <string name="question_2">Please enter the improvement  opportunities</string>
+    <string name="excellence">Excellence </string>
+    <string name="good">Good</string>
+    <string name="avg">Average</string>
+    <string name="worst">Worst</string>
+    <string name="submit">Submit</string>
+
+
+</resources>
