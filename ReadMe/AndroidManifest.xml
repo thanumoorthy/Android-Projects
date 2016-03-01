@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thanu.readme"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.thanu.readme.MenuActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.thanu.readme.MainActivity"
+            android:label="@string/app_name" 
+             android:screenOrientation="landscape"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.SPEAK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+        <activity
+            android:name="com.thanu.readme.ScorePage"
+            android:label="@string/app_name" 
+             android:screenOrientation="landscape"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.SCORE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.thanu.readme.Findname"
+            android:label="@string/title_activity_findname"
+             android:screenOrientation="landscape"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             >
+        </activity>
+        <activity
+            android:name="com.thanu.readme.SpellActivity"
+            android:label="@string/title_activity_spell"
+             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             android:screenOrientation="landscape"
+             >
+        </activity>
+    </application>
+
+</manifest>
