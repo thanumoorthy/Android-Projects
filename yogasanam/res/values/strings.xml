@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Yogasanam</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <!-- Yoga types  begins -->
+
+    <string name="yoga1">1-சூரிய நமஸ்காரம்</string>
+    <string name="yoga2">2-தாளாசனம்</string>
+    <string name="yoga3">3-உட்கட்டாசனம்</string>
+    <string name="yoga4">4-அர்த்த சக்ராசனம்</string>
+    <string name="yoga5">5-பாத ஹஸ்தாஸனம்</string>
+    <string name="yoga6">6-அர்த்தகடி சக்ராசனம்</string>
+    <string name="yoga7">7-திரிகோணாசனம்</string>
+    <string name="yoga8">8-பரிவ்ருத்த திரிகோணாசனம்</string>
+    <string name="yoga9">9-ஏக பாதாசனம்</string>
+    <string name="yoga10">10-அர்த்த சிராசனம்</string>
+    <string name="yoga11">11-சக்ராசனம்</string>
+    <string name="yoga12">12-பர்வதாசனம்</string>
+    <string name="yoga13">13-வஜ்ராசனம்</string>
+    <string name="yoga14">14-உஷ்டிராசனம்</string>
+    <string name="yoga15">15-வஜ்ரா முத்ரா (சசாங்கசனம்)</string>
+    <string name="yoga16">16-சுப்த வஜ்ராசனம்</string>
+    <string name="yoga17">17-பஸ்சி மோத்தாசனம்</string>
+    <string name="yoga18">18-சித்த பத்மாசனம்</string>
+    <string name="yoga19">19-பர்வத ஆசனம் (மலை)</string>
+    <string name="yoga20">20-யோக முத்ரா</string>
+    <string name="yoga21">21-கோமுகாசனம்</string>
+    <string name="yoga22">22-வக்ராசனம்</string>
+    <string name="yoga23">23-அர்த்த மச்சேந்திராசனம்</string>
+    <string name="yoga24">24-ஆகர்ண தனுராசனம்</string>
+    <string name="yoga25">25-அமர்ந்த ஏகபாத ஆசனம்</string>
+    <string name="yoga26">26-குதபாத ஆசனம்</string>
+    <string name="yoga27">27-புஜங்காசனம்</string>
+    <string name="yoga28">28-சலபாசனம்</string>
+    <string name="yoga29">29-தனுராசனம் </string>
+    <string name="yoga30">30-உத்தன பாதாசனம்</string>
+    <string name="yoga31">31-சர்வாங்காசனம்</string>
+    <string name="yoga32">32-மச்சாசனம்</string>
+    <string name="yoga33">33-பவன முக்தாசனம் (காற்றுக்கு விடுதலை)</string>
+    <string name="yoga34">34-விபரீத கரணி</string>
+    <string name="yoga35">35-கூர்மாசனம் </string>
+    <string name="yoga36">36-அர்த்த சர்வாங்காசனம்</string>
+    <string name="yoga37">37-யோக நித்ராசனம்</string>
+    <string name="yoga38">38-பத்மசயனாசனம்</string>
+    <string name="yoga39">39-புஜ பாத பீடாசனம்</string>
+    <string name="yoga40">40-சாந்தியாசனம்</string>
+
+    <!-- Yoga types  ends -->
+
+
+    <!-- Yoga Details  begins -->
+    <string name="yoga_detail1">         எந்த ஒரு ஆசனம் செய்வதற்கு முன்பும் <b>சூரிய நமஸ்காரம்</b> செய்வது மிகவும் முக்கியம். சூரிய நமஸ்காரம் என்பது
+         மந்திரமும் ஆசனமும் சேர்ந்த ஒரு அபூர்வ அதிசக்தி அளிக்கும் படைப்பாகும்.
+         உடல் சிறப்புற சூரிய நமஸ்காரம் என்ற ஆசனத்தில் 10 வகையில் உடல் நிலைகளை வைக்கும் ஆசனங்கள் உள்ளன. 
+         சூரிய நமஸ்காரம் செய்தபின் இயல்பான மூச்சு வரும் வரை ஓய்வெடுக்க வேண்டும். அதன் பின்னரே மற்ற ஆசனங்கள் செய்ய வேண்டும்.</string>
+    <string name="yoga_detail2"> மனம் : நரம்பு மண்டலம் முழுவதும்
+மூச்சின் கவனம் : கைகளை மேலே உயர்த்தும் போது உள்மூச்சு, ஆசனத்தின் போது இயல்பான மூச்சு விடும் போது வெளிமூச்சு.
+உடல் ரீதியான பலன்கள் : நுரையீரல் நெஞ்சுப்பகுதி பலம்பெறும். உடல் முழுவதும் இரத்தஓட்டம் சீரடைந்து நரம்பு மண்டலம் வலிமை பெறும். புத்துணர்ச்சி மிகும். மன வலிமை கூடும். நிமிர்ந்த மிடுக்கான தோற்றம் கிடைக்கும்.
+குணமாகும் நோய்கள் : ஆஸ்துமா, கூன்முதுகு
+ஆன்மீக பலன்கள் : மனம் ஒருமைப்படும்
+எச்சரிக்கை : குதிகால் வலி உள்ளவர்கள் செய்யக்கூடாது.</string>
+    <string name="yoga_detail3"> this is surya <b> namskaram </b></string>
+
+    <!-- Yoga Details  ends -->
+
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_launch">Yogasanam-Tamil</string>
+
+</resources>

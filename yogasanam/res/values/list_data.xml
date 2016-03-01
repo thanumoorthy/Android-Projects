@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="yoga">
+        <item>Adobe After Effects</item>
+        <item>Adobe Bridge</item>
+        <item>Adobe Dreamweaver</item>
+       
+    </string-array>
+    
+        <string-array name="yogaimage">
+        <item>ic_icon</item>
+        <item>ic_icon</item>
+        <item>ic_icon</item>
+       
+    </string-array>
+</resources>
