@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DSA Plus</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+
+    <string name="alogorithm">Learn Algorithm</string>
+    <string name="datastructure">Learn Datastructure</string>
+    <string name="favorite">Favorite Topics</string>
+    <string name="interview_question">Interview Questions</string>
+    <string name="interview_tip">Interview Tips</string>
+
+</resources>

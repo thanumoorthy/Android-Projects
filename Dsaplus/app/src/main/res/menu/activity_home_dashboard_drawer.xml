@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_home"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"
+            />
+    </group>
+    <group
+        android:id="@+id/group_fav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_fav"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Favorite" />
+    </group>
+    <group
+        android:id="@+id/group_setting"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Setting" />
+
+    </group>
+    <group
+        android:id="@+id/group_share"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="Share" />
+    </group>
+
+    <group
+        android:id="@+id/group_ratus"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_rateus"
+            android:icon="@drawable/ic_thumb_up_black_18dp"
+            android:title="RateUs" />
+    </group>
+
+    <group
+        android:id="@+id/group_otherproduct"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/other_product"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Other Products" />
+
+    </group>
+    <group
+        android:id="@+id/group_empty"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/empty_item"
+
+             />
+    </group>
+
+</menu>
