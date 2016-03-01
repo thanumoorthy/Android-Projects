@@ -1,7 +1,10 @@
 package com.thanu.feedback;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +14,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -19,6 +25,19 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private RadioButton ratebtn = null;
     private Button  submit  = null;
     private Toast toast = null;
+    private String URL = null;
+    private String rating = null;
+    private String feedback = null;
+    private final String BaseURL = "http://192.168.43.59:8080/AIR-Mobile/ws/rateus/";
+    private final String PARAM1 = "rating";
+    private final String PARAM2 = "feedback";
+    private ProgressDialog pDialog = null;
+    private String jsonStr = null;
+    private String status = null;
+    private final String TAG_MSG = "Message";
+    private final String FAIL_MSG = "Failure";
+
+
 
 
     @Override
@@ -45,7 +64,22 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     System.out.println("Rate is " + ratebtn.getText());
                     System.out.println("comment is " + comment.getText());
                     if ( null != ratebtn.getText() && null!= comment.getText() ){
+                          rating =  ratebtn.getText().toString();
+                          feedback = comment.getText().toString();
 
+                        try {
+                            rating = java.net.URLEncoder.encode(rating, "utf-8").replaceAll("\\+",
+                                    "%20");
+                            feedback = java.net.URLEncoder.encode(feedback,
+                                    "utf-8").replaceAll("\\+", "%20");
+                        } catch (Exception e) {
+
+                            e.printStackTrace();
+                        }
+                        URL = BaseURL +  rating + "/"
+                                + feedback ;
+                        System.out.println("Submitting request " + URL);
+                        new submitFeedback().execute();
                     }
 
                 }
@@ -81,4 +115,78 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+    private class submitFeedback extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // Showing progress dialog
+
+            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setMessage("Submiting the feedback...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            // TODO Auto-generated method stub
+
+            ServiceHandler sh = new ServiceHandler();
+
+            // Making a request to url and getting response
+
+            try {
+                jsonStr = sh.makeServiceCall(URL, ServiceHandler.GET);
+
+            } catch (Exception e) {
+                status = FAIL_MSG;
+                System.out.println("Exception occurs " + e);
+
+            }
+
+            if (jsonStr != null ) {
+                try {
+                    JSONObject jsonObj = new JSONObject(jsonStr);
+                    status = jsonObj.getString(TAG_MSG);
+
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    status = FAIL_MSG;
+                    e.printStackTrace();
+                }
+
+            }
+
+            return null;
+
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            // Dismiss the progress dialog
+            if (pDialog.isShowing())
+                pDialog.dismiss();
+                URL = "";
+
+
+                Intent i;
+                Bundle input = new Bundle();
+                input.putString(TAG_MSG, status);
+
+                i = new Intent(MainActivity.this, Resultscreen.class);
+                i.putExtras(input);
+                startActivity(i);
+
+
+        }
+
+    }
+
+
 }
