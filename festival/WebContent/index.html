@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta
+	content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="keywords"
+	content="diwali greeting, online gift cards,diwali, whatsapp wishes, diwali wishes online, wish you a happy diwali, Happy diwali greetings, diwali cards, new year wishes, happy new year 2018, 2018 wishes, 2018, happy new year wishes " />
+<meta name="description"
+	content="diwali greeting, online gift cards,diwali, whatsapp wishes, diwali wishes online, wish you a happy diwali, Happy diwali greetings, diwali cards, new year wishes, happy new year 2018, 2018 wishes, 2018, happy new year wishes " />
+<title>Happy Diwali</title>
+<link href="css/style.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/f.js"></script>
+</head>
+
+<body>
+	<audio id="audio1" src="sound/001.wav" autostart="false"></audio>
+	<audio id="audio2" src="sound/002.wav" autostart="false"></audio>
+	<audio id="audio3" src="sound/003.wav" autostart="false"></audio>
+	<audio id="audio4" src="sound/004.wav" autostart="false"></audio>
+	<audio id="audio5" src="sound/005.mp3" autostart="false"></audio>
+	<audio id="audio6" src="sound/006.mp3" autostart="false"></audio>
+	<audio id="audio7" src="sound/007.mp3" autostart="false"></audio>
+	<!-- a href="http://go.onclasrv.com/afu.php?zoneid=1425493" style="width: 100px;" id="first_ad">&nbsp;</a -->
+	<!-- <a href="whatsapp://send?text=&#9733;Advance%20Happy%20Diwali.&#9733; %0A%0AClick%20below%20link &#x261F; %0Ahttp://festivalday.in/Thanu %0A%0AAfter click any place on page%20%26%20rise%20volume, then%20look%20at%20the%20miracle." style="color: #fff; font-size: 12px; float: right; width: 200px; text-align: right;" data-action="share/whatsapp/share"><img src="src/share4.jpg"></a> -->
+	<div style="clear: both;"></div>
+	<div id="text">
+		<center>
+			<div>
+				<h1 class='glow'></h1>
+			</div>
+			<h1 class="msg">Wish you a Advance</h1>
+			<br>
+			<h1 class="msg">Happy Diwali</h1>
+		</center>
+	</div>
+</body>
+<script>
+	function playSound() {
+		var x = Math.floor((Math.random() * 7) + 1);
+		var sound = document.getElementById("audio" + x);
+		sound.play();
+	}
+	function myFunction() {
+		var person = prompt("Please enter your name:", "");
+		if (person != "" && person != null) {
+			setCookie("FestivalWishName", person, 15);
+			showName();
+			window.location = "#";
+		}
+	}
+
+	function showName() {
+
+		$(".glow").append(getCookie("FestivalWishName"));
+		$('#text').show();
+
+	}
+
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires=" + d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	if (getCookie("FestivalWishName") == ""
+			|| getCookie("FestivalWishName") == undefined) {
+		myFunction();
+	} else {
+		showName();
+	}
+</script>
+</html>
